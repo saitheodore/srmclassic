@@ -11,7 +11,7 @@ class MainPage(webapp2.RequestHandler):
 
         if user:
             self.response.headers['Content-Type'] = 'text/html; charset=utf-8'
-            self.response.write('Hello, ' + user.nickname() + ' using google service')
+            self.response.write('Hello, ' + user.nickname() + ' using google service ')
         else:
             self.redirect(users.create_login_url(self.request.uri))
 
